@@ -1,0 +1,137 @@
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+body {
+    background-color: $amarillo;
+}
+#modelos {
+    .loader__img {
+        max-width: 200px;
+        position: relative;
+        top: 9em;
+        left: 45%;
+        animation: spin 1.5s infinite;
+    
+        @media (max-width: 768px) {
+            top: 6em;
+            left: 25%;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+        @media (max-width: 768px) {
+            font-size: 34px;
+            margin-top: 3em;
+        }
+    }
+
+    .contenedor__modelos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        
+
+        .modelo__card {
+            display: flex;
+            background-color: $negro;
+            border-radius: 20px;
+            border: 3px solid $negro;
+            margin: 20px 0;
+            box-shadow: 7px 7px 13px -3px rgba(0,0,0,0.4);
+            @media (max-width: 768px) {
+                flex-direction: column;
+                width: 90%;
+            }
+            img {
+                border-radius: 17px 0 0 17px;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    border-radius: 17px 17px 0 0;
+                }
+            }
+
+            .container__datos {
+                padding: 40px 0px 40px 40px;
+                width: 33em;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    padding: 30px;
+                }
+
+                h3 {
+                    color: $amarillo;
+                    font-size: 35px;
+                    font-family: 'VisionBlack';
+                    display: inline-block;
+                    @media (max-width: 768px) {
+                        font-size: 32px;
+                    }
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    top: 23px;
+                    right: 13px;
+                    @media (max-width: 768px) {
+                        top: 10px;
+                    }
+
+                    li {
+                        margin: 10px 20px;
+
+                        p {
+                            color: $blanco;
+                            font-size: 18px;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            img {
+                                border-radius: 0;
+                                margin-right: 9px;
+                                @media (max-width: 768px) {
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn__volverInicio {
+        position: fixed;
+        bottom: 5%;
+        right: 3%;
+        background-color: $negro;
+        padding: 10px;
+        border-radius: 49%;
+        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.4);
+        transition: .8s;
+        &:hover {
+            transform: rotate(360deg);
+        }
+        img {
+            max-width: 35px;
+        }
+    }
+}

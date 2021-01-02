@@ -1,0 +1,50 @@
+[
+    {   
+        "id": 1,
+        "imagen": "../img/modelos/premium.png",
+        "modelo": "Modelo Premium",
+        "metroscuadrados": "72 mts2",
+        "dormitorios": 3,
+        "banios": 2,
+        "cocinaComedor": "Cocina con comedor",
+        "living": "Living",
+        "lavadero": "Si",
+        "cochera": "Cochera con galería"
+    },
+    {   
+        "id": 2,
+        "imagen": "../img/modelos/standard.png",
+        "modelo": "Modelo Standard",
+        "metroscuadrados": "69 mts2",
+        "dormitorios": 2,
+        "banios": 1,
+        "cocinaComedor": "Cocina sin comedor",
+        "living":"Living",
+        "lavadero": "No",
+        "cochera": "Cochera sin galería"
+    },
+    {   
+        "id": 3,
+        "imagen": "../img/modelos/habitatA.png",
+        "modelo": "Serie Habitat A",
+        "metroscuadrados": "70 mts2",
+        "dormitorios": 3,
+        "banios": 1,
+        "cocinaComedor": "Cocina",
+        "living":"Living/Comedor",
+        "lavadero": "Si",
+        "cochera": "Cochera sin galería"
+    },
+    {   
+        "id": 4,
+        "imagen": "../img/modelos/habitatB.png",
+        "modelo": "Serie Habitat B",
+        "metroscuadrados": "72 mts2",
+        "dormitorios": 2,
+        "banios": 1,
+        "cocinaComedor": "Cocina con comedor",
+        "living":"Living/Estar",
+        "lavadero": "No",
+        "cochera": "Cochera con galería"
+    }
+]

@@ -1,0 +1,243 @@
+.container__financiacion {
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        width: 44em;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 1.5;
+        margin-top: 1em;
+        @media (max-width: 768px) {
+            font-size: 16px;
+            width: auto;
+        }
+    }
+
+    .preciofinal__container {
+        display: flex;
+        align-items: center;
+        margin: 1em 0 2em 0;
+        @media (max-width: 768px) {
+            justify-content: space-around;
+        }
+
+        .precio__final {       
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px;
+            border-radius: 8px;
+            color: $amarillo;
+            background: $negro;
+            @media (max-width: 768px) {
+                font-size: 17px;
+            }
+        }
+
+        .ver__metros {
+            font-size: 21px;
+            font-weight: 600;
+            background: $negro;
+            color: $amarillo;
+            padding: 8px;
+            margin-right: 2em;
+            border-radius: 8px;
+            @media (max-width: 768px) {
+                font-size: 17px;
+            }
+        }
+    }
+    
+    .container__financiar {
+        display: flex;
+        align-items: center;
+        margin: 1em 0 2em 0;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            img {
+                display: none;
+            }
+        }
+
+        .btn__financiar {
+            box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+            padding: 10px 7px;
+            background-color: transparent;
+            color: $negro;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: $negro;
+                color: $amarillo;
+            }
+        }
+
+        img {
+            margin: 0 2em;
+        }
+
+        p {
+            font-size: 20px;
+            @media (max-width: 768px) {
+                margin: 20px 0 10px 0;
+            }
+        }
+
+        .financiado__total {
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            margin-left: 15px;
+            width: 6em;
+            height: 2em;
+            padding-top: 7px;
+            @media (max-width: 768px) {
+                margin: 0;
+            }
+        }
+    }
+
+    .container__cuotas {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .cuotas__mobile {
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+                img {
+                    display: flex;
+                    height: 30px;
+                    margin: 10px;
+                }
+            }
+
+            .select__cuotas {
+                padding: 10px 12px;
+                background-color: transparent;
+                border: 1px solid $negro;
+                border-radius: 5px;
+                font-size: 20px;
+                font-weight: 600;
+                font-family: 'Inter' sans-serif;
+                color: $negro;
+            }
+        }
+
+        img{
+            margin: 0 2em;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .btn__cuotas {
+            box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+            padding: 10px 7px;
+            background-color: transparent;
+            color: $negro;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: $negro;
+                color: $amarillo;
+            }
+        }
+
+        .cuotas__valor {
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            margin-left: 15px;
+            width: 6em;
+            height: 2em;
+            padding-top: 7px;
+        }
+    }
+
+
+    .buttons__financiacion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2.5em;
+        @media (max-width: 768px) {
+            margin-top: 0;
+        }
+
+        .btn__volverPresupuesto {
+            padding: 10px 15px;
+            margin: 20px 0 0 0;
+            background-color: $negro;
+            color: $amarillo;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+            display: block;
+            &:hover {
+                transform: scale(1.04);
+                box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+            }
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+            img {
+                position: relative;
+                top: 2px;
+                right: 3px;
+                transform: rotateY(180deg);
+            }
+        }
+
+        .btn__finalizar {
+            padding: 10px 15px;
+            margin: 20px 0 0 0;
+            background-color: gray;
+            color: $amarillo;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+            display: block;
+            &:hover {
+                transform: scale(1.04);
+                box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+                
+            }
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+            img {
+                position: relative;
+                top: 2px;
+                left: 3px;
+            }
+        }
+    }     
+}
+

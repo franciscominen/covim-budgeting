@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>COVIM - Presupuestos</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/css/main.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- JQUERY -->
+    <script src="js/JQuery-3.5.1.min.js"></script>
+    <!-- JS SCRIPTS -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/presupuesto.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+
+  <section id="presupuesto">
+
+
+    <header class="animate__animated animate__fadeInDown">
+      <img src="img/logo-nav.png" alt="" class="logonav">
+      <img src="img/menumobile.png" class="menu__open" id="menuOpen" alt="">
+      <img src="img/close.png" class="menu__close" id="menuClose" alt="">
+      <nav>
+        <ul id="menu">
+          <li>
+            <a href="index.html">INICIO</a>
+          </li>
+          <li>
+            <a href="http://covimconstrucciones.com.ar/" target="_blank">QUIENES SOMOS?</a>
+          </li>
+          <li>
+            <a href="http://covimconstrucciones.com.ar/" target="_blank">PROCESOS CONSTRUCTIVOS</a>
+          </li>
+          <li>
+            <a href="http://covimconstrucciones.com.ar/" target="_blank">GALERIA</a>
+          <li>
+            <a href="http://covimconstrucciones.com.ar/" target="_blank">CONTACTO</a>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="loader" class="loader">
+      <img src="img/logo-big.svg" alt="Cargando..." class="loader__img" id=""> 
+    </div>
+
+    <div id="contenedorInicio" class="contenedor__inicio animate__animated animate__fadeIn animate__delay-1s">
+
+      <h1>Tener tu propio hogar, es posible.</h1>
+      <h2>Conoce nuestros modelos, o con nuestro simulador podés construir tu casa de forma personalizada y obtener un presupuesto.</h2>
+
+      <div id="cards" class="container__cards">
+        <div id="cardPresupuesto" class="card">
+          <img src="img/presupuesto.png" alt="">
+          <h3>Calculá tu propio presupuesto.</h3>
+        </div>
+        <div id="cardModelos" class="card" onclick="location.href='modelos.html'">
+          <img src="img/modelos.png" alt="">
+          <h3>Conocé nuestros principales Modelos.</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contenedor__app" id="contenedorApp">
+
+      <div id="contenedorPresupuesto" class="container__presupuesto">
+
+        <h1>Presupuesto</h1>
+        <h2>Según la cantidad de metros cuadrados que necesite su hogar para ser construido podrá usted mismo evaluar los diferentes presupuestos que nuestro simulador le brindará automaticamente.
+        <br>Tenga en cuenta que la cantidad de M² ingresada debe ser entre 24m² y 98m²</h2>
+        
+          <h3>Paso 1 - Ingrese la cantidad de M²:</h3>
+          <div class="container__metros" >
+            
+            <input type="number" min="24" max="98" class="metros__input" id="inputMetros" placeholder="24">
+            <p class="m2">m²</p>
+            <img src="img/next.png" alt="">
+            <button id="btnIngresarMetros">Ingresar M²</button>
+
+          </div>
+
+          <h3>Paso 2 - Calcular presupuesto:</h3>
+          <div class="container__precio">
+            <div class="mobile__precio">
+              <p>Total ingresado:</p>
+              <p id="mtsIngresados" class="metros__ingresados"></p>
+              <p class="m2">m²</p>
+              <img src="img/next.png" alt="">
+            </div>
+            <button id="btnCalcularPrecio">Calcular Presupuesto</button>
+          </div>
+
+          <div id="precioFinalContainer" class="preciofinal__container">
+            <p>Precio final:</p>
+            <p id="precioFinal" class="precio__final"></p>
+            <button id="resetPresupuesto" class="btn__reset"><img src="img/redo.png" alt=""></button>
+          </div>
+
+          <div class="container__btns">
+            <button id="btnVolverInicio" class="btn__volverAInicio"> <img src="img/nextYellow.png" alt=""> Inicio </button>
+            <button id="btnFinanciacion" class="btn__financiacion">Financiación <img src="img/nextYellow.png" alt=""></button>
+          </div>
+          
+      </div>
+      
+      <div id="contenedorFinanciacion" class="container__financiacion">
+
+        <h1>Financiación</h1>
+        <h2>En <strong>COVIM</strong> financiamos hasta un 30% de tu presupuesto final obtenido segun el armado de tu hogar perzonalizado. 
+          Chequea con nuestro simulador los diferentes precios mensuales finales a pagar y selecciona el mas accesible.</h2>
+
+        <div class="cuotas__container">
+
+          <div class="preciofinal__container">
+            <p id="verMetrosIngresados" class="ver__metros"></p>
+            <p id="verPrecioFinal" class="precio__final"></p>
+          </div>
+
+          <div class="container__financiar">
+            <button id="btnFinanciar">Financiar 30% </button>
+            <img src="img/next.png" alt="">
+            <p>Total a financiar:</p>
+            <p id="financiadoTotal" class="financiado__total"></p>
+          </div>
+
+          <h3>Seleccione la cantidad de cuotas:</h3>
+          <div class="container__cuotas">
+            <div class="cuotas__mobile">
+              <select id="selectCuotas" class="select__cuotas"></select>
+              <img src="img/next.png" alt="">
+              <button id="btnCuotas">Cuotas de:</button>
+            </div>
+            <img src="img/next.png" alt="">
+            <p id="valorCuota" class="cuotas__valor"></p>
+          </div>
+
+          <div class="buttons__financiacion">
+            <button id="btnVolverPresupuesto"><img src="img/nextYellow.png" alt=""> Presupuesto</button>
+            <button id="btnFinalizar">Finalizar <img src="img/nextYellow.png" alt=""></button>
+          </div>
+
+        </div>
+        
+      </div>   
+
+    </div>
+
+    <div id="contenedorUltimo" class="contenedor__ultimo animate__animated animate__zoomIn animate__slow">
+
+      <div id="contenedorDatosIngresados" class="contenedor__datosIngresados">
+        <h2>Su financiación final es:</h2>
+        <ul>
+          <li> <h3>M² Ingresados:</h3>  <p id="m2Final"></p></li>
+          <li> <h3>Presupuesto total:</h3>  <p id="presupuestoFinal"></p></li>
+          <li> <h3>Total a financiar:</h3>  <p id="financiacionFinal"></p></li>
+          <li> <h3>Cantidad de cuotas:</h3>  <p id="cuotasFinal"></p></li>
+          <li> <h3>Precio por cuota:</h3>  <p id="precioCuotaFinal"></p></li>
+        </ul>
+
+      </div>
+
+      <div id="contenedorForm" class="contenedor__form">
+        <form action="">
+          <h3>Paso final, ingresa tus datos:</h3>
+          <input type="text" id="nombreApellido" placeholder="Nombre y Apellido*" required>
+          <input type="text" id="localidad" placeholder="Localidad">
+          <input type="email" id="email" placeholder="Su email*" required>
+          <textarea name="" id="aclaracion" placeholder="Aclaración" id=""></textarea>
+          <div class="btn__form">
+            <button type="reset" id="btnRedo"><img src="img/redo.png" class="redo__img"></button>
+            <button type="submit" id="btnEnviar" onclick="guardarDatosIngresados()">Enviar <img src="img/send.png" ></button>
+          </div>
+        </form>
+        <button id="btnVolver" class="form__volver"><img src="img/nextYellow.png" alt=""> Volver</button>  
+      </div>
+
+    </div>
+
+  
+  </section>  
+
+</body>
+</html>

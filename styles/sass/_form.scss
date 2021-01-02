@@ -1,0 +1,149 @@
+.contenedor__ultimo {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    .contenedor__datosIngresados {
+        background-color: #f8f8f780;
+        padding: 45px;
+        margin: 10px;
+        width: 24em;
+        height: 32.8em;
+        border-radius: 15px;
+        border: 2px solid $negro;
+        @media (max-width: 768px) {
+            width: 90%;
+            height: auto;
+            padding: 40px 20px 0 20px;
+        }
+        
+        h2 {
+            font-size: 23px;
+            font-weight: 700;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    
+        ul {
+            list-style: none;
+            margin-top: 40px;
+            li {
+                margin: 50px 0;
+                display: flex;
+                align-items: center;
+                @media (max-width: 768px) {
+                    margin: 35px 0;
+                }
+    
+                p {
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    
+    
+    .contenedor__form {
+        flex-direction: column;
+        background-color: #e2bf2cc2;
+        border-radius: 15px;
+        margin: 10px;
+        padding: 45px 60px;
+        width: 25em;
+        border: 2px solid $negro;
+        @media (max-width: 768px) {
+            padding: 40px 30px;
+            width: 90%;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+    
+            h3 {
+                font-size: 22px;
+                color: $negro;
+                margin-bottom: 15px;
+            }
+    
+            input {
+                margin: 10px 0;
+                padding: 10px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $negro;
+                font-size: 18px ;
+            }
+    
+            textarea{
+                margin: 10px 0;
+                padding: 10px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $negro;
+                font-size: 18px ;
+                font-family: 'Inter';
+            }
+    
+            .btn__form {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+                button {
+                    padding: 10px;
+                    font-size: 17px;
+                    font-weight: 500;
+                    font-family: 'Inter' sans-serif;
+                    background-color: $negro;
+                    color: $amarillo;
+                    border-radius: 5px;
+                    border: none;
+                    img {
+                        position: relative;
+                        top: 2px;
+                        margin-left: 6px;
+                    }
+                    .redo__img{
+                        margin-left: 0;
+                    }
+                }
+            }        
+        }
+    
+        .form__volver {
+            padding: 10px;
+            background-color: $negro;
+            color: $amarillo;
+            border: none;
+            border-radius: 5px;
+            margin-top: 25px;
+            font-family: 'Inter' sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            width: 100%;
+            img {
+                transform: rotateY(180deg);
+                position: relative;
+                top: 2px;
+                right: 6px;
+            }
+        }
+    }
+    
+    .offline {
+        background-color: #778288!important;
+    }
+
+}
+
+.datos__enviados {
+    display: none;
+
+}

@@ -1,0 +1,137 @@
+#presupuesto {
+    height: 100vh;
+    background-image: url(../../img/presupuesto-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 2em;
+    }
+
+    .contenedor__inicio {
+    width: 60%;
+    margin: auto;
+    margin-top: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    @media (max-width: 768px) {
+       width: 90%;
+       margin-top: 6em;
+    }
+
+    h1 {
+        color: $blanco;
+        font-size: 50px;
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+    }
+    h2 {
+        color: $blanco;
+        font-size: 20px;
+        font-weight: 300;
+        width: 41em;
+        margin-left: 37px;
+        @media (max-width: 768px) {
+            width: auto;
+            margin: 10px 0 0 0;
+            font-size: 18px;
+        }
+    }
+
+    .container__cards {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        @media (max-width: 768px) {
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 17em;
+            height: 19em;
+            background-color: #e2bf2cb5;
+            margin: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $negro;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: .5s;
+            @media (max-width: 768px) {
+                margin: 20px 10px 65px 10px;
+                padding: 14px;
+                width: 10em;
+                height: 13em;
+            }
+            &:hover {
+                background-color: $amarillo;
+                transform: scale(1.05);
+            }
+
+            img {
+                max-width: 100px;
+                margin-bottom: 25px;
+                @media (max-width: 768px) {
+                    max-width: 50px;
+                }
+            }
+
+            h3 {
+                color: #F8F8F7;
+                font-size: 23px;
+                text-align: center;
+                @media (max-width: 768px) {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    }
+
+    .contenedor__app {
+        background-color: #e2bf2cc2;
+        margin: 5em auto 0;
+        padding: 45px 60px;
+        width: 58em;
+        height: 36em;
+        border-radius: 15px;
+        box-shadow: 5px 5px 7px -1px rgba(0,0,0,0.42);
+        display: none;
+        @media (max-width: 768px) {
+            width: 90%;
+            height: 46em;
+            padding: 40px 20px;
+            margin-top: 5em;
+        }
+    }
+
+    .loader {
+        display: none;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        @media (max-width: 768px) {
+            position: static;
+            height: 90vh;
+            display: none;
+        }
+        .loader__img {
+            max-width: 200px;
+            animation: spin 1.5s infinite;
+            position: relative;
+            top: 12em;
+            @media (max-width: 768px) {
+                max-width: 140px;
+            }
+        }
+    }
+    
+}

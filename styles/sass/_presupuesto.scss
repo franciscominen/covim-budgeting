@@ -1,0 +1,235 @@
+.container__presupuesto {
+    
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0.5em 0 1.5em 0;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+    h3 {
+        font-size: 21px;
+        font-weight: 600;
+        @media (max-width: 768px) {
+            font-size: 19px;
+        }
+    }
+
+    .container__metros {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+            margin: 0 25px;
+        }
+
+        .metros__input {
+            width: 65px;
+            background-color: transparent;
+            padding: 10px 5px;
+            margin: 15px 0;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            color: $negro;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Inter' sans-serif;
+            text-align: center;
+            &::placeholder {
+                font-weight: 300;
+            }
+        }
+        .m2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .btn__IngresarM2 {
+            padding: 10px 7px;
+            background-color: transparent;
+            color: $negro;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: $negro;
+                color: $amarillo;
+            }
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .container__precio {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .mobile__precio {
+            display: flex;
+            align-items: center;
+            @media (max-width: 768px) {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        p {
+            font-size: 18px;  
+        }
+
+        .metros__ingresados {
+            font-size: 21px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid $negro;
+            width: 50px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 7px;
+            margin: 0 10px;
+        }
+        .m2 {
+            font-size: 22px;
+            font-weight: 600;
+
+        }
+
+        img {
+            margin: 0 25px;
+        }
+
+        .btn__presupuesto {
+            box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+            padding: 10px 7px;
+            background-color: transparent;
+            color: $negro;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: $negro;
+                color: $amarillo;
+            }
+        }
+    }
+    .preciofinal__container{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+
+        p {
+            font-size: 19px;
+            font-weight: 500;
+        }
+
+        .precio__final {       
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid $negro;
+            border-radius: 5px;
+            margin-left: 15px;
+            width: 8em;
+            height: 2em;
+            padding-top: 7px;
+        }
+
+        .btn__reset {
+            background: $negro;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 20px;
+            transition: .3s;
+            cursor: pointer;
+            &:hover img{
+                transform: rotate(360deg);
+            }
+            img {
+                position: relative;
+                top: 2px;
+                transition: .4s;
+            }
+        }
+        
+    }
+
+    .container__btns {
+        display: flex;
+        justify-content: space-between;
+
+        .btn__volverAInicio {
+            padding: 10px 15px;
+            margin: 20px 0 0 0;
+            background-color: $negro;
+            color: $amarillo;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+            display: block;
+            &:hover {
+                transform: scale(1.04);
+                box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+                
+            }
+            img {
+                position: relative;
+                top: 2px;
+                right: 3px;
+                transform: rotate(180deg);
+            }
+        }
+        .btn__financiacion {
+            padding: 10px 15px;
+            margin: 20px 0 0 0;
+            background-color: gray;
+            color: $amarillo;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+            display: block;
+            &:hover {
+                transform: scale(1.04);
+                box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.43);
+                
+            }
+            img {
+                position: relative;
+                top: 2px;
+                left: 3px;
+            }
+        }
+    }
+}
+

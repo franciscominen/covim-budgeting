@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $negro;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'VisionBlack';
+    color: $negro;
+}
+p, a, h2, button{
+    font-family: 'Inter', sans-serif;
+    color: $negro;
+}
+h3 {
+    font-family: 'VisionRegular';
+    color: $negro;
+}
+
+@font-face {
+    src: url(../fonts/VISION/VISION-BLACK.TTF);
+    font-family: 'VisionBlack';
+}
+@font-face {
+    src: url(../fonts/VISION/VISION-REGULAR.TTF);
+    font-family: 'VisionRegular';
+}
